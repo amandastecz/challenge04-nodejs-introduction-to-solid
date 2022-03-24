@@ -19,3 +19,6 @@ Essa será uma aplicação de listagem e cadastro de usuários. Para que a l
 ### GET `/users`
 
 -[] A rota deve receber, pelo header da requisição, uma propriedade `user_id` contendo o `id` do usuário e retornar uma lista com todos os usuários cadastrados. O `id` deverá ser usado para validar se o usuário que está solicitando a listagem é um admin. O retorno da lista deve ser feito apenas se o usuário for admin.
+
+## Models
+-[x] Criar model do user
