@@ -2,7 +2,7 @@
 
 Essa será uma aplicação de listagem e cadastro de usuários. Para que a listagem de usuários funcione, o usuário que solicita a listagem deve ser um admin (mais detalhes ao longo da descrição).
 
-## Rotas da Aplicação
+## Controllers e Use Cases:
 
 ### POST `/users`
 
@@ -18,7 +18,14 @@ Essa será uma aplicação de listagem e cadastro de usuários. Para que a l
 
 ### GET `/users`
 
--[] A rota deve receber, pelo header da requisição, uma propriedade `user_id` contendo o `id` do usuário e retornar uma lista com todos os usuários cadastrados. O `id` deverá ser usado para validar se o usuário que está solicitando a listagem é um admin. O retorno da lista deve ser feito apenas se o usuário for admin.
+-[X] A rota deve receber, pelo header da requisição, uma propriedade `user_id` contendo o `id` do usuário e retornar uma lista com todos os usuários cadastrados. O `id` deverá ser usado para validar se o usuário que está solicitando a listagem é um admin. O retorno da lista deve ser feito apenas se o usuário for admin.
 
 ## Models
--[x] Criar model do user
+-[X] Criar model do user
+
+## Repository
+-[X] Implementar lógica do create user
+-[X] Implementar lógica para listar todos os usuários
+-[X] Implementar lógica para encontrar um user pelo id
+-[X] Implementar lógica para encontrar um user pelo e-mail
+-[X] Implementar lógica para tornar um usuário como admin
