@@ -19,7 +19,7 @@ class ListAllUsersUseCase {
       throw Error("User is not administrator!");
     }
     
-    return this.usersRepository.list();;
+    return this.usersRepository.list();
   }
 }
 
