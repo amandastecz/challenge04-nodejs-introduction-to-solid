@@ -1,0 +1,115 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentação da API de Usuários",
+        "description": "Esta é uma API desenvolvida para solidificar conhecimentos de SOLID",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/users": {
+            "post": {
+                "tags": ["Usuários"],
+                "summary": "Cria um usuário",
+                "description": "Cria um novo usuário",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                },
+                                "example":{
+                                    "name": "Amanda Stecz",
+                                    "email": "amanda@meuteste.com.br"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201": {
+                        "description": "Criado com sucesso"
+                    },
+                    "400": {
+                        "description": "Usuário já existe"
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Usuários"],
+                "summary": "Lista todos os usuários",
+                "parameters": {
+                    "in": "header",
+                    "name": "user_id",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": "true",
+                    "description": "Precisa enviar o user_id de um usuário administrador pelo header para ter acesso"
+                },
+                "responses":{
+                    "200": {
+                        "description": "Sucesso"
+                    },
+                    "400": {
+                        "description": "Usuário não existe ou usuário não é administrador"
+                    }
+                }
+            }
+        },
+        "/:user_id/admin":{
+            "patch": {
+                "tags": ["Usuários"],
+                "summary": "Torna o usuário um administrador",
+                "parameters": {
+                    "in": "query",
+                    "name": "user_id",
+                    "schema": {
+                        "type": "string",
+                        "format": "uuid4"
+                    },
+                    "required": "true",
+                    "description": "O id do usuário que se deseja transformar em administrador"
+                },
+                "responses":{
+                    "200": {
+                        "description": "Usuário tornou-se administrador"
+                    },
+                    "404": {
+                        "description": "Usuário não encontrado"
+                    }
+                }
+            }
+        },
+        "/:user_id":{
+            "get": {
+                "tags": ["Usuários"],
+                "summary": "Lista perfil de usuário",
+                "parameters": {
+                    "in": "query",
+                    "name": "user_id",
+                    "schema": {
+                        "type": "string",
+                        "format": "uuid4"
+                    },
+                    "required": "true",
+                    "description": "O id do usuário que se deseja listar"
+                },
+                "responses":{
+                    "200": {
+                        "description": "Sucesso"
+                    },
+                    "404": {
+                        "description": "Usuário não encontrado"
+                    }
+                }
+            }
+        }
+    }
+}
