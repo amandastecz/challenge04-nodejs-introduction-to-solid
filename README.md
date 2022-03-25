@@ -29,3 +29,6 @@ Essa será uma aplicação de listagem e cadastro de usuários. Para que a l
 -[X] Implementar lógica para encontrar um user pelo id
 -[X] Implementar lógica para encontrar um user pelo e-mail
 -[X] Implementar lógica para tornar um usuário como admin
+
+## Documentação
+- Acesse a documentação em http://localhost:3333/api-docs/#/
