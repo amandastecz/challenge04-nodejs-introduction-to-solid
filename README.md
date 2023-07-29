@@ -25,10 +25,15 @@ This will be an application for listing and registering users. For user listing 
 
 ## Repository
 -[X] Implement create user logic
+
 -[X] Implement logic to list all users
+
 -[X] Implement logic to find a user by id
+
 -[X] Implement logic to find a user by email
+
 -[X] Implement logic to make a user as admin
+
 
 ## Documentation
 - Access the documentation at http://localhost:3333/api-docs/#/
